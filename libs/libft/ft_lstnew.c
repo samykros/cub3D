@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spascual <spascual@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blnunez- <blnunez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/19 12:56:21 by spascual          #+#    #+#             */
-/*   Updated: 2025/02/19 13:14:27 by spascual         ###   ########.fr       */
+/*   Created: 2024/10/24 17:22:15 by blnunez-          #+#    #+#             */
+/*   Updated: 2024/10/26 21:17:48 by blnunez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../cub3d.h"
+#include "libft.h"
 
-int main()
+t_list	*ft_lstnew(void *content)
 {
-	char *test = "test";
-	
-	printf("Hello world, we are testing: %zu", ft_strlen(test));
-	return 0;
+	t_list	*new_node;
+
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }

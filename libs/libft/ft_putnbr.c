@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spascual <spascual@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blnunez- <blnunez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/19 12:56:21 by spascual          #+#    #+#             */
-/*   Updated: 2025/02/19 13:14:27 by spascual         ###   ########.fr       */
+/*   Created: 2024/10/24 17:22:45 by blnunez-          #+#    #+#             */
+/*   Updated: 2024/10/24 17:22:46 by blnunez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../cub3d.h"
+#include "libft.h"
 
-int main()
+void	ft_putnbr(int x)
 {
-	char *test = "test";
-	
-	printf("Hello world, we are testing: %zu", ft_strlen(test));
-	return 0;
+	if (x == -2147483648)
+		ft_putstr("-2147483648");
+	if (x < 0)
+	{
+		ft_putchar('-');
+		x = -x;
+	}
+	if (x >= 10)
+		ft_putnbr(x / 10);
+	ft_putchar((x % 10) + '0');
 }

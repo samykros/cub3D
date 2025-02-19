@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spascual <spascual@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blnunez- <blnunez-@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/19 12:56:21 by spascual          #+#    #+#             */
-/*   Updated: 2025/02/19 13:14:27 by spascual         ###   ########.fr       */
+/*   Created: 2025/01/09 18:20:50 by blnunez-          #+#    #+#             */
+/*   Updated: 2025/02/03 16:01:43 by blnunez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../cub3d.h"
+#include "libft.h"
 
-int main()
+char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	char *test = "test";
-	
-	printf("Hello world, we are testing: %zu", ft_strlen(test));
-	return 0;
+	size_t	i;
+
+	i = 0;
+	while (i < n && src[i] != '\0')
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dst[i] = '\0';
+		i++;
+	}
+	return (dst);
 }

@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spascual <spascual@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blnunez- <blnunez-@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/19 12:56:21 by spascual          #+#    #+#             */
-/*   Updated: 2025/02/19 13:14:27 by spascual         ###   ########.fr       */
+/*   Created: 2025/01/09 18:22:06 by blnunez-          #+#    #+#             */
+/*   Updated: 2025/02/03 16:01:54 by blnunez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../cub3d.h"
+#include "libft.h"
 
-int main()
+char	*ft_strcat(char *dst, const char *src)
 {
-	char *test = "test";
-	
-	printf("Hello world, we are testing: %zu", ft_strlen(test));
-	return 0;
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (dst[i] != '\0')
+		i++;
+	while (src[j] != '\0')
+	{
+		dst[i + j] = src[j];
+		j++;
+	}
+	dst[i + j] = '\0';
+	return (dst);
 }

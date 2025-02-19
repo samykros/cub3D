@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putpointer_fd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spascual <spascual@student.42.fr>          +#+  +:+       +#+        */
+/*   By: blnunez- <blnunez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/19 12:56:21 by spascual          #+#    #+#             */
-/*   Updated: 2025/02/19 13:14:27 by spascual         ###   ########.fr       */
+/*   Created: 2024/10/26 19:54:40 by blnunez-          #+#    #+#             */
+/*   Updated: 2024/10/26 20:44:53 by blnunez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../cub3d.h"
+#include "libft.h"
 
-int main()
+void	ft_putpointer_fd(void *p, int fd)
 {
-	char *test = "test";
-	
-	printf("Hello world, we are testing: %zu", ft_strlen(test));
-	return 0;
+	if (p == NULL || p == 0)
+		ft_putstr_fd("(nil)", fd);
+	ft_putstr_fd("0x", fd);
+	ft_puthex_fd((unsigned long)p, 0, fd);
 }

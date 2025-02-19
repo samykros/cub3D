@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spascual <spascual@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/19 12:56:21 by spascual          #+#    #+#             */
-/*   Updated: 2025/02/19 13:14:27 by spascual         ###   ########.fr       */
+/*   Created: 2025/02/19 13:11:53 by spascual          #+#    #+#             */
+/*   Updated: 2025/02/19 13:13:23 by spascual         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../cub3d.h"
+#ifndef SO_LONG_H
+# define SO_LONG_H
 
-int main()
-{
-	char *test = "test";
-	
-	printf("Hello world, we are testing: %zu", ft_strlen(test));
-	return 0;
-}
+# include "libs/libft/libft.h"
+# include "libs/mlx/mlx.h"
+# include "libs/mlx/mlx_int.h"
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+
+
+#endif
