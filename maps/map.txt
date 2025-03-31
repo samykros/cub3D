@@ -1,0 +1,15 @@
+EXPLICACION DE UN MAPA
+
+NO ./textures/wall_north.xpm   # Pared norte
+SO ./textures/wall_south.xpm   # Pared sur
+WE ./textures/wall_west.xpm    # Pared oeste
+EA ./textures/wall_east.xpm    # Pared este
+
+F 150,100,50  # Color del suelo (marrón)
+C 200,200,255 # Color del cielo (azul claro)
+
+1111111111  # Paredes cerradas (1)
+1000000001  # Espacio vacío (0)
+1001N00001  # Jugador (N) mirando al norte
+1000000001  # Espacio vacío (0)
+1111111111  # Paredes cerradas (1)

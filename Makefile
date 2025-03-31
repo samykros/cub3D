@@ -16,6 +16,10 @@ INCLUDES = -I ./include -I $(MLX_DIR)
 
 # Archivos fuente y objetos
 SRCS =	src/main.c \
+		src/window.c \
+		src/check_map.c \
+		src/init.c \
+		src/utils.c \
 
 OBJS = $(SRCS:.c=.o)
 
